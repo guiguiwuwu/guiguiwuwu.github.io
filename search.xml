@@ -6,7 +6,10 @@
     <content><![CDATA[<h2 id="Trojan是什么"><a href="#Trojan是什么" class="headerlink" title="Trojan是什么"></a>Trojan是什么</h2><p>Trojan将流量伪装成用户正常访问网页时的HTTPS流量，防止流量被检测和干扰。理论上敏敢时期也能稳如老狗，但是GFW就算无法获取内容也能通过分析来判断，就像你一天24小时大流量访问一个国外网页，明显不合理</p>
 <span id="more"></span>
 
-<h2 id="搭建准备"><a href="#搭建准备" class="headerlink" title="搭建准备"></a>搭建准备</h2><h3 id="一台VPS服务器-这个按照自己选择-RN家的便宜不错购买完成记得ping一下看是否连通"><a href="#一台VPS服务器-这个按照自己选择-RN家的便宜不错购买完成记得ping一下看是否连通" class="headerlink" title="一台VPS服务器 这个按照自己选择 RN家的便宜不错购买完成记得ping一下看是否连通"></a>一台VPS服务器 这个按照自己选择 <a href="https://www.racknerd.com/">RN</a>家的便宜不错购买完成记得ping一下看是否连通</h3><h3 id="域名申请-随便选择一家域名服务商购买就行-尽量国外的，本人用的namesilo"><a href="#域名申请-随便选择一家域名服务商购买就行-尽量国外的，本人用的namesilo" class="headerlink" title="域名申请 随便选择一家域名服务商购买就行 尽量国外的，本人用的namesilo"></a>域名申请 随便选择一家域名服务商购买就行 尽量国外的，本人用的<a href="https://www.namesilo.com/">namesilo</a></h3><h3 id="DNS解析-推荐CF-cloudflare"><a href="#DNS解析-推荐CF-cloudflare" class="headerlink" title="DNS解析 推荐CF(cloudflare)"></a>DNS解析 推荐CF(<a href="https://www.cloudflare.com/">cloudflare</a>)</h3><h2 id="VPS服务器部署"><a href="#VPS服务器部署" class="headerlink" title="VPS服务器部署"></a>VPS服务器部署</h2><h3 id="安装Xshell用来远程连接服务器"><a href="#安装Xshell用来远程连接服务器" class="headerlink" title="安装Xshell用来远程连接服务器"></a>安装Xshell用来远程连接服务器</h3><p>主机处输入ip地址，购买vps的时候会有</p>
+<h2 id="搭建准备"><a href="#搭建准备" class="headerlink" title="搭建准备"></a>搭建准备</h2><h3 id="一台VPS服务器"><a href="#一台VPS服务器" class="headerlink" title="一台VPS服务器"></a>一台VPS服务器</h3><p>这个按照自己选择 <a href="https://www.racknerd.com/">RN</a>家的便宜不错购买完成记得ping一下看是否连通</p>
+<h3 id="域名申请"><a href="#域名申请" class="headerlink" title="域名申请"></a>域名申请</h3><p>随便选择一家域名服务商购买就行 尽量国外的，本人用的<a href="https://www.namesilo.com/">namesilo</a></p>
+<h3 id="DNS解析"><a href="#DNS解析" class="headerlink" title="DNS解析"></a>DNS解析</h3><p>推荐CF(<a href="https://www.cloudflare.com/">cloudflare</a>)</p>
+<h2 id="VPS服务器部署"><a href="#VPS服务器部署" class="headerlink" title="VPS服务器部署"></a>VPS服务器部署</h2><h3 id="安装Xshell用来远程连接服务器"><a href="#安装Xshell用来远程连接服务器" class="headerlink" title="安装Xshell用来远程连接服务器"></a>安装Xshell用来远程连接服务器</h3><p>主机处输入ip地址，购买vps的时候会有</p>
 <h3 id="更新源"><a href="#更新源" class="headerlink" title="更新源"></a>更新源</h3><p>更新源</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br></pre></td></tr></table></figure>
 
