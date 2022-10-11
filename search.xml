@@ -6,27 +6,33 @@
     <content><![CDATA[<h2 id="Trojan是什么"><a href="#Trojan是什么" class="headerlink" title="Trojan是什么"></a>Trojan是什么</h2><p>Trojan将流量伪装成用户正常访问网页时的HTTPS流量，防止流量被检测和干扰。理论上敏敢时期也能稳如老狗，但是GFW就算无法获取内容也能通过分析来判断，就像你一天24小时大流量访问一个国外网页，明显不合理</p>
 <span id="more"></span>
 
-<h2 id="搭建准备"><a href="#搭建准备" class="headerlink" title="搭建准备"></a>搭建准备</h2><h3 id="一台VPS服务器"><a href="#一台VPS服务器" class="headerlink" title="一台VPS服务器"></a>一台VPS服务器</h3><p>这个按照自己选择 <a href="https://www.racknerd.com/">RN</a>家的便宜不错购买完成记得ping一下看是否连通</p>
-<h3 id="域名申请"><a href="#域名申请" class="headerlink" title="域名申请"></a>域名申请</h3><p>随便选择一家域名服务商购买就行 尽量国外的，本人用的<a href="https://www.namesilo.com/">namesilo</a></p>
-<h3 id="DNS解析"><a href="#DNS解析" class="headerlink" title="DNS解析"></a>DNS解析</h3><p>推荐CF(<a href="https://www.cloudflare.com/">cloudflare</a>)</p>
-<h2 id="VPS服务器部署"><a href="#VPS服务器部署" class="headerlink" title="VPS服务器部署"></a>VPS服务器部署</h2><h3 id="安装Xshell用来远程连接服务器"><a href="#安装Xshell用来远程连接服务器" class="headerlink" title="安装Xshell用来远程连接服务器"></a>安装Xshell用来远程连接服务器</h3><p>主机处输入ip地址，购买vps的时候会有</p>
-<h3 id="更新源"><a href="#更新源" class="headerlink" title="更新源"></a>更新源</h3><p>更新源</p>
+<h2 id="搭建准备"><a href="#搭建准备" class="headerlink" title="搭建准备"></a>搭建准备</h2><h4 id="一台VPS服务器"><a href="#一台VPS服务器" class="headerlink" title="一台VPS服务器"></a>一台VPS服务器</h4><p>这个按照自己选择 <a href="https://www.racknerd.com/">RN</a>家的便宜不错购买完成记得ping一下看是否连通</p>
+<h4 id="域名申请"><a href="#域名申请" class="headerlink" title="域名申请"></a>域名申请</h4><p>随便选择一家域名服务商购买就行 尽量国外的，本人用的<a href="https://www.namesilo.com/">namesilo</a></p>
+<h4 id="DNS解析"><a href="#DNS解析" class="headerlink" title="DNS解析"></a>DNS解析</h4><p>推荐CF(<a href="https://www.cloudflare.com/">cloudflare</a>)</p>
+<h2 id="VPS服务器部署"><a href="#VPS服务器部署" class="headerlink" title="VPS服务器部署"></a>VPS服务器部署</h2><h4 id="安装Xshell用来远程连接服务器"><a href="#安装Xshell用来远程连接服务器" class="headerlink" title="安装Xshell用来远程连接服务器"></a>安装Xshell用来远程连接服务器</h4><p>主机处输入ip地址，购买vps的时候会有</p>
+<h4 id="更新源"><a href="#更新源" class="headerlink" title="更新源"></a>更新源</h4><p>更新源</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt upgrade -y</span><br></pre></td></tr></table></figure>
 
-<h3 id="安装bbr加速"><a href="#安装bbr加速" class="headerlink" title="安装bbr加速:"></a>安装bbr加速:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget -N --no-check-certificate &quot;https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh&quot; &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh</span><br></pre></td></tr></table></figure>
+<h4 id="安装bbr加速"><a href="#安装bbr加速" class="headerlink" title="安装bbr加速:"></a>安装bbr加速:</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget -N --no-check-certificate &quot;https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh&quot; &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh</span><br></pre></td></tr></table></figure>
 
 <p>推荐选择安装bbrplus内核，使用bbrplus版加速</p>
-<h3 id="一键安装x-ui"><a href="#一键安装x-ui" class="headerlink" title="一键安装x-ui"></a>一键安装x-ui</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bash &lt;(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)</span><br></pre></td></tr></table></figure>
+<h4 id="一键安装x-ui"><a href="#一键安装x-ui" class="headerlink" title="一键安装x-ui"></a>一键安装x-ui</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bash &lt;(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)</span><br></pre></td></tr></table></figure>
 
 <p>如果vps提示curl: command not found,先复制下面的代码安装curl，再执行上面的脚本。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">apt install -y curl       #ubuntu/debian 系统安装 Curl </span><br></pre></td></tr></table></figure>
 
 <p>安装完成后根据提示的端口从浏览器访问:IP:54321，默认账号密码都是admin</p>
 <p>然后添加节点: trojan</p>
-<h3 id="转换为clash能用的链接"><a href="#转换为clash能用的链接" class="headerlink" title="转换为clash能用的链接"></a>转换为clash能用的链接</h3><p>下面这个链接能将trojan节点转换为clash可识别的链接：<a href="https://sub.dler.io/">https://sub.dler.io/</a></p>
+<h4 id="转换为clash能用的链接"><a href="#转换为clash能用的链接" class="headerlink" title="转换为clash能用的链接"></a>转换为clash能用的链接</h4><p>下面这个链接能将trojan节点转换为clash可识别的链接：<a href="https://sub.dler.io/">https://sub.dler.io/</a></p>
 ]]></content>
+      <categories>
+        <category>科学上网</category>
+      </categories>
+      <tags>
+        <tag>Trojan</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hello World</title>
@@ -46,5 +52,31 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>ESXI划分vlan相关</title>
+    <url>/2022/10/11/ESXI%E5%88%92%E5%88%86vlan%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<h2 id="esxi网络端口如何设置trunk-access模式"><a href="#esxi网络端口如何设置trunk-access模式" class="headerlink" title="esxi网络端口如何设置trunk access模式"></a>esxi网络端口如何设置trunk access模式</h2><ul>
+<li><p>VLAN ID: 0  <strong>阻止</strong>任何携带了 VLAN tag 的数据包</p>
+</li>
+<li><p>VLAN ID: 4095 <strong>允许</strong>通过携带任何 VLAN tag 的数据包（trunk）</p>
+</li>
+<li><p>VLAN ID <code>1~4094</code> <strong>仅允许</strong>携带指定 VLAN ID tag 的数据包</p>
+</li>
+</ul>
+<p>默认地，在未做更改的情况下，虚拟机往往是使用的 VLAN ID 为 <code>0</code> 的网络。<br>当我们需要虚拟机间的网卡能接收到携带任何 VLAN tag 的数据包时，就需要设置 trunk 网络！</p>
+<h2 id="ESXI设置TRUNK"><a href="#ESXI设置TRUNK" class="headerlink" title="ESXI设置TRUNK"></a>ESXI设置TRUNK</h2><ul>
+<li>记得设置虚拟交换机安全模式，全部接受就绪</li>
+<li>将端口组vlanid设置为4095</li>
+</ul>
+<p>然后虚拟机就能使用该设置了trunk的虚拟网卡了</p>
+]]></content>
+      <categories>
+        <category>Network</category>
+      </categories>
+      <tags>
+        <tag>valn</tag>
+        <tag>esxi</tag>
+      </tags>
   </entry>
 </search>
